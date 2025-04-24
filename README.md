@@ -1,34 +1,25 @@
-# Contour Detection and Inflection Point Identification
+# 윤곽선 검출 및 변곡점 식별
 
-This project provides a Python script for detecting contours and identifying inflection points within images, using OpenCV. It specifically focuses on finding areas of interest, calculating distances between contours, and marking inflection points based on specified threshold values.
+본 프로젝트는 OpenCV를 사용하여 이미지 내 객체의 윤곽선을 검출하고, 특정 임계값에 따라 변곡점을 식별하는 Python 스크립트를 제공합니다. 주요 관심 영역을 찾고, 윤곽선 간 거리를 계산하며, 정의된 임계값을 기준으로 변곡점을 표시하는 데 중점을 둡니다.
 
-## Features
+## 주요 기능
 
-- **Contour Detection**: Identifies and draws contours of objects within an image based on area, width, and height thresholds.
-- **Distance Measurement**: Calculates and displays the distance between adjacent contours, considering only those with significant width.
-- **Inflection Point Identification**: Finds and marks the 'M' (maximum) and 'W' (minimum) inflection points along the top and bottom boundaries of detected contours.
+- **윤곽선 검출**: 면적, 너비, 높이 임계값을 기반으로 이미지 내 객체의 윤곽선을 식별하고 그립니다.
+- **거리 측정**: 너비가 충분히 큰 인접한 윤곽선 사이의 거리를 계산하고 표시합니다.
+- **변곡점 식별**: 검출된 윤곽선의 상단 경계에서 'M'(최대) 변곡점을, 하단 경계에서 'W'(최소) 변곡점을 찾아 표시합니다.
 
-## Requirements
+## 요구 사항
 
 - Python 3.x
-- OpenCV (`cv2`) library
+- OpenCV (`cv2`) 라이브러리
 
-## Installation
+## 설치
 
-Ensure you have Python 3.x installed on your system. You can then install OpenCV using pip:
+Python 3.x가 시스템에 설치되어 있는지 확인하세요. 그 후, pip를 사용하여 OpenCV를 설치할 수 있습니다.
 
 ```bash
 pip install opencv-python-headless
 
 
-## Usage
-Run the script by specifying the path to your target image as follows:
-
-```bash
-python process_image.py <image_path> <dist_th> <height_th>
-
-
-## Example
-
-```bash
+python process_image.py <이미지_경로> <거리_임계값> <높이_임계값>
 python process_image.py test.bmp 50 3
